@@ -4,7 +4,9 @@ const theme = {
   colors: {
     textPrimary: '#24292e',
     textSecondary: '#fff',
+
     primary: '#0366d6',
+    mainBgColor: '#e1e4e8',
     panelColor: '#24292e',
   },
   fontSizes: {

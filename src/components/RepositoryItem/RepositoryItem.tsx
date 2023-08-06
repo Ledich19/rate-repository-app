@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, StatusBar, StyleSheet, Image, Pressable, TouchableOpacity } from 'react-native';
-import theme from '../theme';
-import Text from './Text';
-import InfoItem from './InfoItem';
+import theme from '../../theme';
+import Text from '../Text';
+import InfoItem from './Statisticktem';
+import LanguageBtn from './LanguageBtn';
 
 type ItemProps = {
   fullName: string;
@@ -32,12 +33,7 @@ const RepositoryItem = ({
         <View style={styles.nameContainer}>
           <Text style={styles.fullName}>{fullName}</Text>
           <Text>{description}</Text>
-
-          <Pressable style={styles.language}>
-            <Text color="textSecondary" fontSize="subheading">
-              {language}
-            </Text>
-          </Pressable>
+          <LanguageBtn language={language}></LanguageBtn>
         </View>
       </View>
 
@@ -63,16 +59,6 @@ const styles = StyleSheet.create({
   },
   nameContainer: {
     paddingLeft: 10,
-  },
-  language: {
-    backgroundColor: theme.colors.primary,
-    borderRadius: theme.borders.radius,
-    color: theme.colors.textSecondary,
-    alignSelf: 'flex-start',
-    height: 35,
-    marginTop: 10,
-    paddingVertical: 5,
-    paddingHorizontal: 10,
   },
   infoContainer: {
     display: 'flex',
