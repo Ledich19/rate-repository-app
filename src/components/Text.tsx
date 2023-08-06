@@ -3,7 +3,7 @@ import theme from '../theme';
 
 type TextProps = {
   color?: 'textSecondary' | 'primary'; 
-  fontSize?: 'subheading'; 
+  fontSize?: 'subheading' | 'title'; 
   fontWeight?: 'bold'; 
   style?: TextStyle| TextStyle[];
   children: string;
@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
   fontSizeSubheading: {
     fontSize: theme.fontSizes.subheading,
   },
+  fontSizeTitle: {
+    fontSize: theme.fontSizes.title,
+  },
   fontWeightBold: {
     fontWeight: theme.fontWeights.bold,
   },
@@ -36,6 +39,7 @@ const Text = ({ color, fontSize, fontWeight, style, ...props }: TextProps) => {
     color === 'textSecondary' && styles.colorTextSecondary,
     color === 'primary' && styles.colorPrimary,
     fontSize === 'subheading' && styles.fontSizeSubheading,
+    fontSize === 'title' && styles.fontSizeTitle,
     fontWeight === 'bold' && styles.fontWeightBold,
     style,
   ];

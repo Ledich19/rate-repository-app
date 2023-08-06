@@ -3,10 +3,10 @@ import Constants from 'expo-constants';
 import { StyleSheet, TextStyle, View } from 'react-native';
 import RepositoryList from './RepositoryList';
 import Text from './Text';
+import AppBar from './AppBar';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Constants.statusBarHeight,
     flexGrow: 1,
     flexShrink: 1,
   },
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   blueText: {
-    color: 'blue' ,
+    color: 'blue',
   },
   bigText: {
     fontSize: 24,
@@ -23,17 +23,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const FancyText = ({ isBlue, isBig, children }) => {
-  const textStyles = [styles.text, isBlue && styles.blueText, isBig && styles.bigText];
-  return <Text style={textStyles}>{children}</Text>;
-};
-
 const Main = () => {
   return (
     <View style={styles.container}>
-      <FancyText isBig isBlue>
-        Big blue text
-      </FancyText>
+      <AppBar />
       <RepositoryList />
     </View>
   );
