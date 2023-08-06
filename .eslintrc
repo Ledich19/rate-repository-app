@@ -1,0 +1,32 @@
+{
+  "plugins": ["react", "react-native", "react-hooks", "jsx-a11y", "import"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["eslint:recommended", "eslint-config-airbnb", "plugin:react/recommended"],
+  "parser": "@babel/eslint-parser",
+  "env": {
+    "react-native/react-native": true
+  },
+  "rules": {
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-use-before-define": "off",
+
+
+    "react/jsx-filename-extension": "off",
+    "comma-dangle": "off",
+    "padded-blocks": "off",
+    "arrow-body-style": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 2,
+    "react-native/no-raw-text": 2,
+    "react-native/no-single-element-style-arrays": 2,
+    "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
+  }
+}
